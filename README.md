@@ -4,6 +4,7 @@ Cluster k8s local para laboratório com 5 maquinas virtuais, e rancher em docker
 
 O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user agent correto baseado no hostname.
 
+
 ## iniciando o rancher
 
     sudo docker run -d --restart=unless-stopped \
@@ -18,6 +19,11 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
     2. Coloque o token e ca-checksum gerados no rancher
 
     vagrant up
+
+## TODO
+
+    - Usar uma imagem que ja tenha o docker instalado
+    - Colocar o token e ca-checksum como ENV ou qq coisa do tipo
 
 ## Shell Script para limpar um node rke
 
