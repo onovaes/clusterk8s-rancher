@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-#Set up the repository
+##Set up the repository
+sudo apt-get update -y
 
-sudo apt-get update
-
-sudo apt-get install \
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -18,11 +17,6 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 
-# INSTALL dOCKER
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-
-#PERMISSION TO CURRENT USER RUN DOCKER (How to fix docker: Got permission denied issue)
-sudo usermod -aG docker $USER
-newgrp docker
+## INSTALL dOCKER
+sudo apt-get update -y
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io
