@@ -1,6 +1,6 @@
 # CLUSTER K8S COM RANCHER 
 
-Cluster k8s local para laboratório com 5 maquinas virtuais, e rancher em docker.
+Cluster k8s local para laboratório com 5 maquinas virtuais (3 masters + 2 workers), e rancher em docker.
 
 O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user agent correto baseado no hostname.
 
