@@ -2,10 +2,6 @@
 
 Cluster k8s local para laboratório com 5 maquinas virtuais, e rancher em docker
 
-## Inicializando as 5 maquinas virtuais com vagrant
-
-
-
 
 
 ## Shell Script para limpar um node rke

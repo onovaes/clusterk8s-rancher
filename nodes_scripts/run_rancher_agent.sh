@@ -1,6 +1,6 @@
 #/bin/bash
 
-RANCHER_TOKEN=vl58rthkhcqf54hmzz4frzg4lzj8bbv4nvcmxhtwh959vp46lbzcsq
+RANCHER_TOKEN=hskxrp9rqmvhm4zpw5rbgq69m9z5d4rpctn6mlms9z6fm28jk9lxfp
 RANCHER_CA_CHECKSUM=9652909e87e5707f2561cf8c1ad4ffa491bbc3deacae1b67e30c09639a7b779f
 
 
@@ -10,6 +10,11 @@ if [[ $(hostname) == *"master"* ]]; then
   FUNCAO="--etcd --controlplane"
 else
   FUNCAO="--worker"
+fi
+
+# Aguardar 400 segundos antes de rodar o rancher agent no work1, para aguardar os master's ficarem pronto
+if [[ $(hostname) == *"worker1"* ]]; then
+  sleep 400
 fi
 
 # RECEBE O IP POR ARGUMENTO
