@@ -16,8 +16,8 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
 ### Iniciando as 5 vms
 
-    1. Configure os ips no Vagrantfile
-    2. Coloque o token e ca-checksum gerados no rancher
+    1. Configure no arquivo Vagrantfile os ips e nodes
+    2. Configure no  nodes_scripts/run_rancher_agent.sh token e ca-checksum gerados no rancher
 
     vagrant up
 
