@@ -8,7 +8,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
 ### iniciando o rancher
 
-    sudo docker run -d --restart=unless-stopped \
+    $sudo docker run -d --restart=unless-stopped \
     -p 80:80 -p 443:443 \
     -v /opt/rancher:/var/lib/rancher \
     --privileged \
@@ -18,8 +18,9 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
     1. Configure no arquivo Vagrantfile os ips e nodes
     2. Configure no  nodes_scripts/run_rancher_agent.sh token e ca-checksum gerados no rancher
-
-    vagrant up
+    3. Execute o comando a seguir
+    
+    $vagrant up
 
 
 ## Outros
@@ -33,4 +34,4 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
 As vezes vc faz alguma caca node e precisa limpar e reinstalar ele para se juntar ao cluster. O comando a seguir vai fazer a limpeza do node. Recomenda-se o reboot do host após a limpeza
 
-    wget -O - https://raw.githubusercontent.com/onovaes/clusterk8s-rancher/master/nodes_scripts/limpa_node.sh | bash
+    $wget -O - https://raw.githubusercontent.com/onovaes/clusterk8s-rancher/master/nodes_scripts/limpa_node.sh | bash
