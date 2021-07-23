@@ -2,7 +2,20 @@
 
 Cluster k8s local para laboratório com 5 maquinas virtuais, e rancher em docker
 
+## iniciando o rancher
 
+    sudo docker run -d --restart=unless-stopped \
+    -p 80:80 -p 443:443 \
+    -v /opt/rancher:/var/lib/rancher \
+    --privileged \
+    rancher/rancher:v2.5.4
+
+## Iniciando as 5 vms
+
+    1. Configure os ips no Vagrantfile
+    2. Coloque o token e ca-checksum gerados no rancher
+
+    vagrant up
 
 ## Shell Script para limpar um node rke
 
