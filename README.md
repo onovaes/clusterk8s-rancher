@@ -19,7 +19,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
     1. Configure no arquivo Vagrantfile os ips e nodes
     2. Configure no  nodes_scripts/run_rancher_agent.sh token e ca-checksum gerados no rancher
     3. Execute o comando a seguir
-    
+
     $vagrant up
 
 
@@ -28,7 +28,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 ### TODO
 
     - Usar uma imagem que ja tenha o docker instalado
-    - Colocar o token e ca-checksum como ENV ou qq coisa do tipo
+    - Colocar o token e ca-checksum como ENV ou qq coisa do tipo. Esses são gerados no rancher ao se cadastrar um novo cluster.
 
 ### Shell Script para limpar um node rke
 
