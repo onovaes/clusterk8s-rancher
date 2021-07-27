@@ -1,6 +1,6 @@
-# CLUSTER K8S COM RANCHER 
+# CLUSTER RKE COM RANCHER 2.5.4 
 
-Cluster k8s local para laboratório com 5 maquinas virtuais (3 masters + 2 workers), e rancher em docker.
+Cluster kubernetes local para laboratório com 5 maquinas virtuais (3 masters + 2 workers), e rancher em docker.
 
 O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user agent correto baseado no hostname.
 
@@ -16,8 +16,8 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
 ### Iniciando as 5 vms
 
-    1. Configure no arquivo Vagrantfile os ips e nodes
-    2. Configure no  nodes_scripts/run_rancher_agent.sh token e ca-checksum gerados no rancher
+    1. Configure no arquivo Vagrantfile o RANCHER_TOKEN e RANCHER_CA_CHECKSUM, e a faixa de IP da sua rede nos nodes.
+    2. O hostname dos nodes precisa obrigatoriamente começãr com master ou worker
     3. Execute o comando a seguir
 
     $vagrant up
@@ -28,7 +28,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 ### TODO
 
     - Usar uma imagem que ja tenha o docker instalado
-    - Colocar o token e ca-checksum como ENV ou qq coisa do tipo. Esses são gerados no rancher ao se cadastrar um novo cluster.
+    - Colocar as variáveis de configuração de ambiente do Vagrantfile em um arquivo nao versionado
 
 ### Shell Script para limpar um node rke
 

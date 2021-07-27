@@ -1,7 +1,14 @@
 #/bin/bash
 
-RANCHER_TOKEN=hskxrp9rqmvhm4zpw5rbgq69m9z5d4rpctn6mlms9z6fm28jk9lxfp
-RANCHER_CA_CHECKSUM=9652909e87e5707f2561cf8c1ad4ffa491bbc3deacae1b67e30c09639a7b779f
+# RECEBE O IP, RANCHER TOKEN E CHECKUM POR ARGUMENTO
+IP_EXTERNAL=$1
+echo 'IP EXTERNO='$IP_EXTERNAL
+
+RANCHER_TOKEN=$2
+echo 'RANCHER_TOKEN='$RANCHER_TOKEN
+
+RANCHER_CA_CHECKSUM=$3
+echo 'RANCHER_CA_CHECKSUM='$RANCHER_CA_CHECKSUM
 
 
 
@@ -12,14 +19,13 @@ else
   FUNCAO="--worker"
 fi
 
-# Aguardar 400 segundos antes de rodar o rancher agent no work1, para aguardar os master's ficarem pronto
+# Aguardar alguns segundos antes de rodar o rancher agent no work1. Para garantir que pelo menos 1 master' esteja pronto
 if [[ $(hostname) == *"worker1"* ]]; then
-  sleep 400
+  TIME_TO_SLEEP=350
+  echo "Aguardando $TIME_TO_SLEEP antes de iniciar a instalação do primeiro worker"
+  sleep $TIME_TO_SLEEP
 fi
 
-# RECEBE O IP POR ARGUMENTO
-IP_EXTERNAL=$1
-echo 'IP EXTERNO='$IP_EXTERNAL
 
 
 #EXECUTA O RANCHER AGENT NO NODE
