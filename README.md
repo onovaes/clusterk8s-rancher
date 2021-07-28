@@ -29,6 +29,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
     - Usar uma imagem que ja tenha o docker instalado
     - Colocar as variáveis de configuração de ambiente do Vagrantfile em um arquivo nao versionado
+    - Colocar um countdown no timer que precede a instalação do worker1
 
 ### Shell Script para limpar um node rke
 

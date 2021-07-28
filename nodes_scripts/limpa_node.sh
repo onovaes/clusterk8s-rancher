@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+# Script auxiliar (nao usado no Vagrantfile) para limpar um node e posteriormente instalar o rancheragent
+
 docker rm -f $(docker ps -qa)
 docker rmi -f $(docker images -q)
 docker volume rm $(docker volume ls -q)
-
 
 sleep 2
 
@@ -29,9 +30,6 @@ rm -rf /etc/ceph \
 
 
 echo "LIMPANDO A IPTABLES"
-
 iptables -F
-
-
 
 echo "O NODE FOI LIMPO"
