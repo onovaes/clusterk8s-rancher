@@ -13,13 +13,13 @@ servers=[
     {
         :hostname => "worker1",
         :ip => "192.168.0.22",
-        :ram => 2048,
+        :ram => 4096,
         :cpu => 2
     },
     {
         :hostname => "worker2",
         :ip => "192.168.0.23",
-        :ram => 2048,
+        :ram => 4096,
         :cpu => 2
     }
 ]

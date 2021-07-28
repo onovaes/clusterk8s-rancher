@@ -6,7 +6,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
 
 ## Instalação
 
-### iniciando o rancher
+### Iniciando o rancher no docker local
 
     $sudo docker run -d --restart=unless-stopped \
     -p 80:80 -p 443:443 \
@@ -14,7 +14,7 @@ O vagrant é responsavel por subir as vm's, instalar o docker e rodar o user age
     --privileged \
     rancher/rancher:v2.5.4
 
-### Iniciando as 5 vms
+### Iniciando as vms que ficarão os nodes
 
     1. Configure no arquivo Vagrantfile o RANCHER_TOKEN e RANCHER_CA_CHECKSUM, e a faixa de IP da sua rede nos nodes.
     2. O hostname dos nodes precisa obrigatoriamente começãr com master ou worker
