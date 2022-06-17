@@ -1,7 +1,7 @@
 # BEGIN - PREENCHA AS CONFIGURACOES CONFORME SEU AMBIENTE
 
-RANCHER_TOKEN="tk99hghfmbf4n2nh8vz66glpskkvvlbrh7vw6fckq9r66s6pskw8hx"
-RANCHER_CA_CHECKSUM="808da33e4d8ffdbf8b61b444afbd8f83c17f3a63c3ac03131ef9abe50ddf7540"
+RANCHER_TOKEN="xxxxxxxxxxxxx"
+RANCHER_CA_CHECKSUM="xxxxxxxxxxxxx"
 
 servers=[
     {
